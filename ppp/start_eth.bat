@@ -1,0 +1,1 @@
+nbminer -a ethash -o stratum+tcp://eu1.ethermine.org:4444 -u 0x7fA77b2fa9ffa66856C923adf05EBAcAE0bfB38B.T900 -log
