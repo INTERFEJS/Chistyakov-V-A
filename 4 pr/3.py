@@ -1,3 +1,4 @@
+# -- coding: utf-8 --
 def funct(A, B):
     C = A+1
     if A > B:
