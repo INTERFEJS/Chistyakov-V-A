@@ -9,4 +9,4 @@ def func(N):
             i += 1
     else:
         print("Введённое число меньше чем 2")
-func(int(input("Введите N (N >= 2): ")))
+func(int(input("Введите число (число >= 2): ")))
