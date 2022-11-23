@@ -1,5 +1,5 @@
 # -- coding: utf-8 --
-#Вариант-14
+#Вариант-13
 import math
 corner_X = 0
 corner_Y = 0

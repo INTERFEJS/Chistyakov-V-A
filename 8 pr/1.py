@@ -1,5 +1,5 @@
 # -- coding: utf-8 --
-#Вариант-14
+#Вариант-13
 def func(k):
     for index in range (1, k+1):
         first_number = index
