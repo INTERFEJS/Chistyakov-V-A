@@ -33,7 +33,7 @@ def func():
             else:
                 break
         N = column_index
-
+    
     #вывод массива
     with open ('10 pr\\Chistyakov-V-A_y-223_vivod.txt', 'w', encoding='utf-8') as file:
         sys.stdout = file
@@ -45,14 +45,30 @@ def func():
 
         print()
 
-    #выполняем расчеты в матрице
-        for i in range (M):
-            for j in range(N):
-                if (i+1) % 2 == 0:
-                    s = A[i]
-                    minimum_element = min(s)
-                    print("Минимальный элемент в", i+1, "-й строке:", minimum_element)
-                    break
-        sys.stdout = output
+        #вносим изменения в массив
+        min_count = min(map(min, A))
+        max_count = max(map(max, A))
+        print("Минимальное значение:", min_count)
+        print("Максимальное значение:", max_count)
+        print()
         
+        for i in range(M):
+            for j in range(N):
+                if A[i][j] == min_count:
+                    min_line = i
+                    min_column = j
+                if A[i][j] == max_count:
+                    max_line = i
+                    max_column = j
+        A[min_line][min_column] = max_count
+        A[max_line][max_column] = min_count
+
+        #вывод обновлённого массива
+        print("Изменённый массив:")
+        for i in range(M):
+            for j in range(N):
+                print(A[i] [j], end = ' ')
+            print()
+        sys.stdout = output
+            
 func()
